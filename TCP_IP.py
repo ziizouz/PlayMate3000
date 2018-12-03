@@ -10,8 +10,9 @@ def start(sharedData, lock, com_param):
         ###################################### Listening ####################################################################
         command = com_manager.TCP_listener()
         while True:
-            result = midMan.getCommand(command)
-            if result != None:
+            result = str(midMan.getCommand(command))
+            print(result)
+            if result:
                 break
         
         ##################################### End listerning ################################################################
